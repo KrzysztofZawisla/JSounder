@@ -1,0 +1,33 @@
+{
+  "name": "jsounder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s dist",
+    "build": "rimraf dist & webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/losek1/JSounder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/losek1/JSounder/issues"
+  },
+  "homepage": "https://github.com/losek1/JSounder#readme",
+  "dependencies": {
+    "howler": "^2.2.3"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

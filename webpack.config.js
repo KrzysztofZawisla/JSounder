@@ -26,8 +26,8 @@ module.exports = () => {
             }),
             new CopyPlugin({
                 patterns: [{
-                    from: join(__dirname, 'src', 'audio'),
-                    to: join(__dirname, 'dist', 'audio'),
+                    from: join(__dirname, 'src', 'test.jpg'),
+                    to: join(__dirname, 'dist', 'test.jpg'),
                     noErrorOnMissing: true
                 }],
                 options: {

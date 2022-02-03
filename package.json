@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/losek1/JSounder#readme",
   "dependencies": {
-    "howler": "^2.2.3"
+    "howler": "^2.2.3",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^10.2.4",

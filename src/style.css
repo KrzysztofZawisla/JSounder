@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background: transparent;
   font-family: "Dongle", sans-serif;
+  background: transparent;
 }
 
 #container {
@@ -29,10 +30,127 @@ body {
   flex-direction: row;
 }
 
+#upper-right-content {
+  width: calc(100% - 210px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#upper-header {
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  user-select: none;
+  border-bottom: 1px solid #3b3b3b;
+  justify-content: space-between;
+}
+
+#header-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+.header-button {
+  font-family: "Segoe Fluent Icons", sans-serif;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.header-button:hover {
+  background: #323232;
+}
+
 #lower-content {
   width: 100%;
   height: 80px;
   background: #121212;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+}
+
+.song {
+  width: calc(100% - 20px);
+  margin: 10px 0 0 10px;
+  background: #252525;
+  border-radius: 4px;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  padding: 0 10px 0 10px;
+  user-select: none;
+}
+
+.song-art {
+  display: flex;
+  margin-right: 10px;
+}
+
+.song-title {
+  width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.song-art > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+.song-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.song-artist {
+  color: #ccc;
+}
+
+.song-buttons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.song-button {
+  font-family: "Segoe Fluent Icons", sans-serif;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.song-button:hover {
+  background: #323232;
 }
 
 #upper-menu {
@@ -115,6 +233,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 8px;
+  z-index: 1;
 }
 
 /* Track */
@@ -131,13 +250,6 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #121212;
-}
-
-#lower-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 #song-info {

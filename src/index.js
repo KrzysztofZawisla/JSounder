@@ -3,18 +3,43 @@
 //     Howler
 // } from 'howler';
 
+import {
+    capitalize
+} from 'lodash';
+
 import './style.css';
+
+const playlistMenu = document.querySelector('#playlists-menu');
+const playlistsButton = document.querySelector('#playlists-button');
+const playlist = `<div class="menu-item">
+<span class="icon"></span>
+<span>Playlist</span>
+</div>`
+
+playlistsButton.addEventListener('click', () => {
+    playlistMenu.innerHTML += playlist;
+
+});
+
 
 const libraryButton = document.querySelector('#library-button');
 const searchButton = document.querySelector('#search-button');
 const favouritesButton = document.querySelector('#favourites-button');
 const settingsButton = document.querySelector('#settings-button');
 
+// header
+const pageHeader = document.querySelector('#page-header');
 
 const menuButtons = new Set([libraryButton, searchButton, favouritesButton, settingsButton]);
+const buttonsToPages = {
+    'library-button': './pages/library.html',
+    'search-button': './pages/search.html',
+    'favourites-button': './pages/favourites.html',
+    'settings-button': './pages/settings.html'
+};
+
 
 let activeButton = null;
-
 
 menuButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -24,6 +49,8 @@ menuButtons.forEach(button => {
             }
             activeButton = button;
             button.classList.add('menu-active');
+            console.log(buttonsToPages[activeButton.id]);
+            pageHeader.innerHTML = `${capitalize(activeButton.id.split('-')[0])}`;
         }
 
     });

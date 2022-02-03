@@ -1,2 +1,4 @@
 node_modules
 dist
+src/audio
+src/test.jpg

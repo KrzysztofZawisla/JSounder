@@ -7,7 +7,7 @@ import {
     capitalize
 } from 'lodash';
 
-import './style.css';
+import './style.scss';
 
 const playlistMenu = document.querySelector('#playlists-menu');
 const playlistsButton = document.querySelector('#playlists-button');

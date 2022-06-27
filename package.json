@@ -29,7 +29,7 @@
     "mini-css-extract-plugin": "^2.5.3",
     "rimraf": "^3.0.2",
     "sass": "^1.49.8",
-    "sass-loader": "^12.6.0",
+    "sass-loader": "^13.0.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   }
